@@ -34,7 +34,7 @@ class Credentials:
             if account.account_name == account_name:
                 return account
     
-     @classmethod
+    @classmethod
     def check_credential_existence(cls, account_name):
 
         """
