@@ -22,3 +22,14 @@ class Credentials:
         """
 
         Credentials.credentials_list.remove(self)
+    
+    @classmethod
+    def find_by_account_name(cls, account_name):
+
+        """
+        method to search a credential from the credentials list based on the account name
+        """
+
+        for account in cls.credentials_list:
+            if account.account_name == account_name:
+                return account
