@@ -29,7 +29,7 @@ class Credentials_test(unittest.TestCase):
 
         Credentials.credentials_list = []
     
-     def test_save_user(self):
+    def test_save_credential(self):
     
         """
         test if a credential is actually saved in the credentials list
