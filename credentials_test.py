@@ -37,3 +37,14 @@ class Credentials_test(unittest.TestCase):
 
         self.new_credentials.save_credentials()
         self.assertEqual(len(Credentials.credentials_list), 1)
+    
+    def test_save_multiple_credentials(self):
+    
+        """
+        test if the system can save multiple credentials
+        """
+
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("toni", "twitter", "tweetme:)")
+        test_credentials.save_credentials()
+        self.assertEqual(len(Credentials.credentials_list), 2)
