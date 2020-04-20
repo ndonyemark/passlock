@@ -10,3 +10,13 @@ class Credentials_test(unittest.TestCase):
         """
 
         self.new_credentials = Credentials("ndonyemark", "instagram", "bossbaby")
+    
+    def test_init(self):
+    
+        """
+        check if what is expected and what is passed in is as expected by the system
+        """
+
+        self.assertEqual(self.new_credentials.username, "ndonyemark")
+        self.assertEqual(self.new_credentials.account_name, "instagram")
+        self.assertEqual(self.new_credentials.account_password, "bossbaby")
