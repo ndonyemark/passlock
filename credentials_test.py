@@ -60,3 +60,15 @@ class Credentials_test(unittest.TestCase):
         test_credentials.save_credentials()
         self.new_credentials.del_credentials()
         self.assertEqual(len(Credentials.credentials_list), 1)
+    
+    def test_find_user_by_account_name(self):
+    
+        """
+        method to test if you can lookup a credential based on the account_name
+        """
+
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("toni", "twitter", "tweetme:)")
+        test_credentials.save_credentials()
+        found_credential = Credentials.find_by_account_name("twitter")
+        self.assertEqual(found_credential.account_name, test_credentials.account_name)
