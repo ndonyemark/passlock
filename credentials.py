@@ -14,3 +14,11 @@ class Credentials:
         """
 
         Credentials.credentials_list.append(self)
+    
+    def del_credentials(self):
+    
+        """
+        method to remove a credential from the credentials_list
+        """
+
+        Credentials.credentials_list.remove(self)
