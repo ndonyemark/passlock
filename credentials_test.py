@@ -20,3 +20,11 @@ class Credentials_test(unittest.TestCase):
         self.assertEqual(self.new_credentials.username, "ndonyemark")
         self.assertEqual(self.new_credentials.account_name, "instagram")
         self.assertEqual(self.new_credentials.account_password, "bossbaby")
+    
+    def tearDown(self):
+    
+        """
+        method to resets the credentials list
+        """
+
+        Credentials.credentials_list = []
