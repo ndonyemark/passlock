@@ -28,3 +28,12 @@ class Credentials_test(unittest.TestCase):
         """
 
         Credentials.credentials_list = []
+    
+     def test_save_user(self):
+    
+        """
+        test if a credential is actually saved in the credentials list
+        """
+
+        self.new_credentials.save_credentials()
+        self.assertEqual(len(Credentials.credentials_list), 1)
