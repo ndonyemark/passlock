@@ -33,3 +33,14 @@ class Credentials:
         for account in cls.credentials_list:
             if account.account_name == account_name:
                 return account
+    
+     @classmethod
+    def check_credential_existence(cls, account_name):
+
+        """
+        method to look up the existence of a credential based on the account name
+        """
+
+        for account in cls.credentials_list:
+            if account.account_name == account_name:
+                return True
