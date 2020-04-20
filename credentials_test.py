@@ -48,3 +48,15 @@ class Credentials_test(unittest.TestCase):
         test_credentials = Credentials("toni", "twitter", "tweetme:)")
         test_credentials.save_credentials()
         self.assertEqual(len(Credentials.credentials_list), 2)
+    
+    def test_delete_user(self):
+    
+        """
+        test if the system actually deletes a credential
+        """
+
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("toni", "twitter", "tweetme:)")
+        test_credentials.save_credentials()
+        self.new_credentials.del_credentials()
+        self.assertEqual(len(Credentials.credentials_list), 1)
