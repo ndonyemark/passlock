@@ -84,3 +84,11 @@ class Credentials_test(unittest.TestCase):
         test_credentials.save_credentials()
         credential_exist = Credentials.check_credential_existence("twitter")
         self.assertTrue(credential_exist)
+    
+    def test_display_credentials(self):
+    
+        """
+        method to test if theusers returned to the display credential equal the users list
+        """
+
+        self.assertEqual(Credentials.display_credentials(), Credentials.credentials_list)
