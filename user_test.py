@@ -60,3 +60,15 @@ class Users_test(unittest.TestCase):
         test_user.save_user()
         found_user =Users.find_user("Mark")
         self.assertEqual(found_user.username, test_user.username)
+
+         def test_check_user_exists(self):
+    
+        """
+        method to test if a user really exists in the users list
+        """
+
+        self.new_user.save_user()
+        test_user = Users("Mark", "justmark")
+        test_user.save_user()
+        check_user =Users.check_user_exist("Mark")
+        self.assertTrue(check_user)
