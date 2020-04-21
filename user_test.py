@@ -36,3 +36,15 @@ class Users_test(unittest.TestCase):
 
         self.new_user.save_user()
         self.assertEqual(len(Users.users_list), 1)
+    
+    def test_delete_users(self):
+        
+        """
+        test if the system actually deletes the users
+        """
+
+        self.new_user.save_user()
+        test_user = Users("Mark", "justmark")
+        test_user.save_user()
+        self.new_user.del_user()
+        self.assertEqual(len(Users.users_list), 1)
