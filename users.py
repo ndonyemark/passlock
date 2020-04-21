@@ -1,4 +1,4 @@
-from credential import Credentials
+from credentials import Credentials
 
 class Users:
     users_list = []

@@ -80,3 +80,6 @@ class Users_test(unittest.TestCase):
         """
         
         self.assertEqual(Users.display_user(), Users.users_list)
+
+if __name__ == '__main__':
+    unittest.main()
