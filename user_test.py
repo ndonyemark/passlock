@@ -61,7 +61,7 @@ class Users_test(unittest.TestCase):
         found_user =Users.find_user("Mark")
         self.assertEqual(found_user.username, test_user.username)
 
-         def test_check_user_exists(self):
+    def test_check_user_exists(self):
     
         """
         method to test if a user really exists in the users list
@@ -72,3 +72,11 @@ class Users_test(unittest.TestCase):
         test_user.save_user()
         check_user =Users.check_user_exist("Mark")
         self.assertTrue(check_user)
+    
+    def test_display_users(self):
+    
+        """
+        method to test if theusers returned to the display user equal the users list
+        """
+        
+        self.assertEqual(Users.display_user(), Users.users_list)
