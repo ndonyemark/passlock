@@ -19,3 +19,11 @@ class Users_test(unittest.TestCase):
 
         self.assertEqual(self.new_user.username, "Toni")
         self.assertEqual(self.new_user.password, "Bossbaby")
+    
+    def tearDown(self):
+    
+        """
+        method to resets the users list
+        """
+
+        Users.users_list = []
