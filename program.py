@@ -1,4 +1,4 @@
-from credential import Credentials
+from credentials import Credentials
 from users import Users
 import time
 import secrets
