@@ -28,6 +28,25 @@ def login(username, password):
     if login != False:
         return Users.login(username, password)
 
+def create_credential(username, account_name, account_password):
+    new_credentials = Credentials(username, account_name, account_password)
+    return new_credentials
+
+def save_credentials(credential):
+    credential.save_credentials()
+
+def del_credentials(credential):
+    credential.delete_credentials()
+
+def find_credentials(account_name):
+    return Credentials.find_by_account_name(account_name)
+
+def check_credential(account_name):
+    return Credentials.check_credential_existence(account_name)
+
+def display_credentials():
+    return Credentials.display_credentials()
+
 def main():
     name = input("Enter your name: ")
 
