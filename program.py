@@ -27,3 +27,8 @@ def login(username, password):
     login = Users.login(username, password)
     if login != False:
         return Users.login(username, password)
+
+def main():
+    name = input("Enter your name: ")
+
+    print(f"Welcome {name}. What would you like to do?")
