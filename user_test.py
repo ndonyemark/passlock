@@ -10,3 +10,12 @@ class Users_test(unittest.TestCase):
         """
         
         self.new_user = Users("Toni", "Bossbaby")
+    
+    def test_init(self):
+        
+        """
+        check if what is expected and what is passed in is as expected by the system
+        """
+
+        self.assertEqual(self.new_user.username, "Toni")
+        self.assertEqual(self.new_user.password, "Bossbaby")
