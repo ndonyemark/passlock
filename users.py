@@ -57,3 +57,13 @@ class Users:
         """
 
         return cls.users_list
+    
+    def login(cls, username, password):
+    
+        """
+        method to authenticate a user and log him or her into the system
+        """
+        
+        for user in cls.users_list:
+            if user.username == username and user.password == password:
+                return Credentials.credentials_list
